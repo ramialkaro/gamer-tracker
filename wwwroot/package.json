@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "name": "webserver",
+  "private": true,
+  "scripts": {},
+  "dependencies": {
+    "express": ">=4.1",
+    "body-parser": ">=1.1",
+    "nodejs-websocket": ">=1.5.0",
+    "cookie-parser": ">=1.4.1",
+    "mongodb": ">=2.1.9",
+    "mysql": ">=2.10.2",
+    "path": ">=0.12.7"
+  },
+  "devDependencies": {}
+}
