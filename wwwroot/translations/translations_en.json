@@ -1,0 +1,14 @@
+{
+"title":"Book application",
+  "buttons": {
+    "delete": "Delete",
+    "create": "Create",
+    "back": "Back"
+  },
+  "book": {
+    "title": "Title",
+    "author":"Author",
+    "price":"Price",
+    "published":"Published"
+  }
+}

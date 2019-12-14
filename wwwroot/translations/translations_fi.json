@@ -1,0 +1,14 @@
+{
+	"title":"Kirjasovellus",
+  "buttons": {
+    "delete": "Poista",
+    "create": "Uusi",
+    "back": "Takaisin"
+  },
+  "book": {
+    "title": "Nimi",
+    "author":"Kirjailija",
+    "price":"Hinta",
+    "published":"Julkaistu"
+  }
+}

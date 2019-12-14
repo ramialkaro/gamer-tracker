@@ -7,6 +7,8 @@
     "postinstall": "course-setup web-basics && cd server && npm install",
     "package": "gulp package",
     "test": "gulp build",
+    "watch": "webpack --watch",
+    "build": "webpack",
     "start": "cd server && node server.js"
   },
   "author": "",
@@ -22,11 +24,16 @@
     "@angular/platform-browser-dynamic": "^5.0.2",
     "@angular/router": "^5.0.2",
     "bootstrap3": "^3.3.5",
+    "chart.js": "^2.8.0",
     "core-js": "^2.5.1",
+    "express": "^4.17.1",
     "jquery": "^3.3.1",
     "knockout": "^3.4.2",
-    "react": "^16.1.1",
+    "react": "^16.10.2",
+    "react-bootstrap-alert": "^1.0.7",
+    "react-chartjs-2": "^2.8.0",
     "react-dom": "^16.1.1",
+    "react-native": "^0.61.2",
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
     "react-router-dom": "4.2.2",
@@ -78,8 +85,8 @@
     "typescript": "3.1.1",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0",
-    "webpack": "^4.35.2",
-    "webpack-cli": "^3.3.5",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9",
     "webpack-merge": "^4.1.2"
   }
 }

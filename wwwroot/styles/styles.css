@@ -1,0 +1,80 @@
+header{
+    display: block;
+    width: 100%;
+    height: 86px;
+	border-bottom: 1px solid #a0b0f0;
+}
+
+header img{
+    display:inline-block;
+	margin-top: 10px;
+}
+
+header > h1{
+    display:inline-block;
+    margin-left: 20px;
+	vertical-align: middle;
+}
+
+main{
+    min-height: 400px;
+    padding-top: 20px;
+}
+
+footer{
+    display:block;
+    background-color:#f0f0f0;
+    padding: 10px;
+    font-size: 8pt;
+    text-align: center;
+}
+
+nav {
+	border-bottom: 1px solid #a0b0f0;
+}
+
+nav a {
+	margin-right: 20px;
+}
+
+.error {
+    background-color: red;
+	color: white;
+}
+
+.normal {
+	background-color: white;
+	color: black;
+}
+
+.sample-appear {
+	opacity: 0.0;
+}
+
+.sample-appear.sample-appear-active {
+	opacity: 1;
+	transition: opacity 3s linear;
+}
+
+.demo{
+	font-style:italic;
+}
+
+.demo-nav{
+	border-top: 1px solid #80a0ff;
+	border-bottom: 1px solid #80a0ff;
+	padding: 8px 0;
+}
+
+.demo-nav a {
+	margin-right: 10px;
+}
+
+.filecontent {
+	background-color: #f0f0f0;
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: 10px;
+	font-family: "Courier New", Courier, monospace;
+	margin-bottom: 20px;
+}

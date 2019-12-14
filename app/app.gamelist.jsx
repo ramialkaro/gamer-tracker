@@ -9,24 +9,30 @@ export default class GameList extends React.Component{
 
     
 
-    componentDidMount(){
-        HTTP.get("/api/game").then(games => this.setState({games}));
+    UNSAFE_componentWillMount(){
+        HTTP.get("/api/game").then(game => this.setState({games:game}));
     }
         textChanged(ev){
             this.state.game[ev.target.id]=ev.target.value;
             this.forceUpdate();
         }
     render(){
-        console.log(this.state.games);
+        //console.log(this.state.games[0]);
+        
 
         const handleChange = event => {
-            HTTP.get("/api/game/"+event.target.value).then(game => this.setState({game}));
+            
+            HTTP.get("/api/game/"+event.target.value).then(game => this.setState({game:game}));
             console.log(event.target.value);
+            
+            
           };
+         let rows= this.state.games.map(game => <option key={game.id} value={game.name} onChange={handleChange}>{game.name}</option>);
 
+         
 
-
-        let rows=this.state.games.map(o => <option key={o.id} value={o.id} >{o.gameName}</option>)
+          
+        
 
 // to show data in the input field...     
 
@@ -48,7 +54,7 @@ export default class GameList extends React.Component{
                                 placeholder="game name" 
                                 id="gameName"  
                                 onChange={ev => this.textChanged(ev)} 
-                                value={this.state.game.gameName}                             
+                                value="hh"                            
                                 />
                     </div>
 

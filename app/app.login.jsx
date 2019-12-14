@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import Home from './pages/app.home';
 
 export default class LogIn extends Component {
@@ -19,7 +19,7 @@ export default class LogIn extends Component {
         
     const validationUsername =(ev)=>{
         //console.log(ev.target.value);
-        if(ev.target.value==="test"){
+        if(ev.target.value==="developer"){
             this.setState({username:ev.target.value, isCorrectUser:true})
             console.log('user correct');
             
@@ -47,7 +47,13 @@ export default class LogIn extends Component {
         }
     }
     if(this.state.isShow){
-        console.log('its come from the hidden')
+        console.log('its come from the hidden');
+        if(window.confirm("Do you enjoy with this ? ")){
+            console.log("You pressed OK");
+        }
+        else{
+            console.log("You pressed Cancel");
+        }
     }
         return(
             <div className="container w-50 pt-3">
@@ -64,6 +70,9 @@ export default class LogIn extends Component {
                    
 
                 </form>
+
+
+                <p id="post-continer-part">This part was hidden... its appear after you login </p>
             </div>
         );
     }
