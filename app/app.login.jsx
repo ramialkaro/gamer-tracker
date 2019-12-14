@@ -50,6 +50,7 @@ export default class LogIn extends Component {
         console.log('its come from the hidden');
         if(window.confirm("Do you enjoy with this ? ")){
             console.log("You pressed OK");
+            
         }
         else{
             console.log("You pressed Cancel");

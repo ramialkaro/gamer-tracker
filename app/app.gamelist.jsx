@@ -4,16 +4,17 @@ import {HTTP} from './http';
 export default class GameList extends React.Component{
     constructor(props){
         super(props);
-        this.state={games:[],game:{id:0,gameName:"",consoleType:"",image:"",price:""}};
+        this.state={games:[],game:{id:0,gameName:"",consoleType:"",image:"",price:""}, selectedGame:[]};
     }
 
     
 
     UNSAFE_componentWillMount(){
-        HTTP.get("/api/game").then(game => this.setState({games:game}));
+        HTTP.get("/api/game").then(game => this.setState({games:game}))
+        console.log("data come from database")
     }
         textChanged(ev){
-            this.state.game[ev.target.id]=ev.target.value;
+            this.state.game[ev.target.name]=ev.target.value;
             this.forceUpdate();
         }
     render(){
@@ -21,25 +22,24 @@ export default class GameList extends React.Component{
         
 
         const handleChange = event => {
-            
-            HTTP.get("/api/game/"+event.target.value).then(game => this.setState({game:game}));
-            console.log(event.target.value);
-            
-            
-          };
-         let rows= this.state.games.map(game => <option key={game.id} value={game.name} onChange={handleChange}>{game.name}</option>);
-
-         
-
-          
-        
+            event.preventDefault();
+            let item = event.target.value;
+            console.log(item);            
+            let selectedItem = this.state.games.filter(games => games.name===item)
+            console.log("selected item.. ",selectedItem[0])
+            this.setState({selectedGame:selectedItem[0]})
+            this.forceUpdate();
+        };
+         let rows= this.state.games.map(game => 
+                <option key={game.id} value={game.name}>{game.name}</option>);
+      
 
 // to show data in the input field...     
 
         return (
             <div>
             <h2>My Own Games</h2>
-                <select className="shadow-lg p-2 mb-5 bg-white rounded w-100"  onChange={handleChange}>
+                <select className="shadow-lg p-2 mb-5 bg-white rounded w-100" onChange={handleChange}>
                     {rows}
                 </select>
 
@@ -53,8 +53,9 @@ export default class GameList extends React.Component{
                                 className="form.control col-sm-10 " 
                                 placeholder="game name" 
                                 id="gameName"  
-                                onChange={ev => this.textChanged(ev)} 
-                                value="hh"                            
+                                name="gameName"
+                                value={this.state.selectedGame.name}   
+                                                        
                                 />
                     </div>
 
@@ -66,8 +67,8 @@ export default class GameList extends React.Component{
                                     className=" col-sm-8 w-100" 
                                     placeholder="console type" 
                                     id="consoleType"
-                                    onChange={ev => this.textChanged(ev)}
-                                    value={this.state.game.consoleType}
+                                    name="consoleType"
+                                    value={this.state.selectedGame.type}
                                     />
                         </div>
 
