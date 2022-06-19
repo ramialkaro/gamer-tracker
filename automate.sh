@@ -13,8 +13,7 @@ while read branch; do
     # grep -Eo "TEAM_COLOR \[UIColor colorWithRed:\([0-9.]+\/[0-9.]+\) green:\([0-9.]+/[0-9.]+\) blue:\([0-9.]+/[0-9.]+\) alpha:1\]" ./app-ios/Customization.h >> ~/dev/app_colors.txt
     git merge $branch
     git push origin master
-    sleep 1
+    git co master
     git pull origin master 
-    sleep 1
 
 done 
