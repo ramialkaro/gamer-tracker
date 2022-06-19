@@ -14,4 +14,7 @@ while read branch; do
     git merge $branch
     git push origin master
     sleep 1
+    git pull origin master 
+    sleep 1
+
 done 
