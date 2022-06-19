@@ -33,7 +33,7 @@
     "react-bootstrap-alert": "^1.0.7",
     "react-chartjs-2": "^2.8.0",
     "react-dom": "^16.1.1",
-    "react-native": "^0.61.2",
+    "react-native": "^0.62.3",
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
     "react-router-dom": "4.2.2",
