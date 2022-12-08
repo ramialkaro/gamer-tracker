@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {},
   "dependencies": {
-    "express": ">=4.1",
-    "body-parser": ">=1.1",
+    "express": ">=4.18",
+    "body-parser": ">=1.20",
     "nodejs-websocket": ">=1.5.0",
     "cookie-parser": ">=1.4.1",
     "mongodb": ">=2.1.9",
