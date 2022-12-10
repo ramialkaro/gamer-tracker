@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {},
   "dependencies": {
-    "express": ">=4.1",
+    "express": ">=4.17",
     "body-parser": ">=1.1",
     "nodejs-websocket": ">=1.5.0",
     "cookie-parser": ">=1.4.1",
